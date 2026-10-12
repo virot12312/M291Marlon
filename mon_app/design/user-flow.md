@@ -2,7 +2,7 @@
 
 **Tâche :** laisser l'app choisir le film de la soirée dans un genre donné, puis l'accepter ou relancer.
 
-**Début :** la personne ouvre Gambling Movie sur son téléphone et arrive sur l'écran d'accueil (liste des genres).  
+**Début :** la personne ouvre Gambling Movie sur son téléphone et arrive sur l'écran d'accueil (recherche + liste des genres).  
 **Fin réussie :** la personne a validé un film tiré au sort (« Je regarde ça ») et voit une confirmation avec le titre et la durée du film.
 
 **Persona :** Léa, 21 ans (voir [persona.md](persona.md)) · **Écrans traversés :** Accueil → Roulette → Fiche film → Confirmation · **Durée visée :** moins de 60 secondes
@@ -13,7 +13,7 @@
 
 1. **Écran 1 — Accueil (choix du genre)**  
    *Action :* Léa ouvre l'app à 21 h depuis son téléphone.  
-   *Feedback attendu :* les 6 genres s'affichent tout de suite en cartes (nom + « 10 films »), sans compte, sans pop-up.
+   *Feedback attendu :* la barre « Rechercher un film » et les 6 genres s'affichent tout de suite en cartes (nom + « 10 films »), sans compte, sans pop-up.
 2. **Écran 1 → Écran 2**  
    *Action :* elle touche la carte « Horreur ».  
    *Feedback attendu :* la carte s'allume (état actif) puis l'écran Roulette s'ouvre ; la puce « Horreur » est active en haut et la roue affiche les 10 films du genre.
@@ -29,7 +29,10 @@
 
 **Boucle « Relancer » :** à l'étape 4, si le film ne lui plaît pas, Léa touche « Relancer » → retour à l'écran 2, la roue relance automatiquement et le film refusé est exclu du tirage suivant (compteur « 2ᵉ tirage »).
 
+**Raccourci « Recherche » :** à l'étape 1, si Léa a déjà un titre en tête, elle tape au moins 2 lettres dans « Rechercher un film » → les films correspondants s'affichent sous le champ → toucher un résultat ouvre directement sa fiche (écran 3), sans passer par la roulette.
+
 ## Variante d'échec (optionnel)
 
 - **Les films ne se chargent pas** (fichier JSON introuvable) → l'écran dit : « Impossible de charger les films. Vérifie ta connexion, puis réessaie. » + bouton « Réessayer ».
 - **Tous les films du genre ont été refusés** → l'écran dit : « Tu as fait le tour des 10 films Horreur ! Choisis un autre genre ou recommence. » + boutons « Changer de genre » et « Tout remettre dans la roue ».
+- **La recherche ne trouve rien** → sous le champ : « Aucun film ne correspond à “xyz”. Vérifie l'orthographe ou choisis un genre. »

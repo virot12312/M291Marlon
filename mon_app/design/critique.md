@@ -123,3 +123,4 @@ A est la plus amusante, mais elle trahit les interdits du brief. B est la plus o
 2. Roue : afficher le titre du film tiré en grand sous la roue et l'annoncer avec `aria-live`, car les titres des tranches sont petits.
 3. Affiche : garder un bandeau ou une ombre sous le titre écrit sur l'image pour qu'il reste lisible quelle que soit l'affiche.
 4. Vérifier que la roue tient sur un écran de 360 px de large, en la réduisant si nécessaire.
+5. Ajouter la barre « Rechercher un film » sur l'accueil, exigée par la fiche wireframes (e2-4) et ajoutée au wireframe 01 après la génération des propositions.
