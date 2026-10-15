@@ -3,7 +3,7 @@
 Fiche e2-7 · Semaine s08 · Référentiel : WCAG 2.2 niveau AA
 
 **Maquette testée :** maquette cliquable de la proposition C « Salle obscure » ([critique.md](critique.md)), avec les 3 écrans du [wireframe](wireframes/) et l'écran de confirmation. Films et affiches inventés.  
-**Appareil du test :** ………… · **Date du test :** …………
+**Appareil du test :** appareil du testeur, via le lien de la maquette · **Date du test :** 15.10.26
 
 ## 1. Scénario de test
 
@@ -18,46 +18,54 @@ Fiche e2-7 · Semaine s08 · Référentiel : WCAG 2.2 niveau AA
 - Le testeur pense à voix haute (Think Aloud).
 - Chronomètre lancé à la fin de la lecture de la consigne, arrêté à « C'est validé ! ». Limite : 5 minutes.
 - Ordre : test 5 secondes → test de localisation → tâche chronométrée.
+- Déroulement réel : test à distance non modéré (voir la fiche d'observation).
 
 ## 3. Fiche d'observation
 
-> **À compléter après le test avec un camarade** (binôme croisé, maquette ouverte sur téléphone).
-
 **App testée :** Gambling Movie  
-**Testeur :** …………  
-**Observateur :** Marlon Pavid  
+**Testeur :** Zinedine  
+**Observateur :** Marlon Pavid (à distance)  
 **Tâche donnée :** le scénario ci-dessus
+
+> Test réalisé à distance : Zinedine a reçu le lien de la maquette et les questions par message, a fait la mission seul et a renvoyé ses réponses par écrit. Les hésitations et les phrases ci-dessous sont celles qu'il a rapportées ; l'observateur ne les a pas vues lui-même.
 
 ### Test 5 secondes
 
-« C'est une appli pour… » (phrase du testeur) : …………
+« C'est une appli pour… » (phrase du testeur) : « C'est une application qui permet de choisir un film au hasard selon ses envies, pour éviter de passer trop de temps à chercher quoi regarder. »
 
-Écart avec l'intention : …………
+Écart avec l'intention : aucun ; « selon ses envies » correspond au choix du genre.
 
 ### Test de localisation
 
-Consigne dite : « Montre-moi où tu tapoterais pour tirer un autre film. » (sur la fiche d'un film)
+Consigne : « Où appuierais-tu pour tirer un autre film ? » (sur la fiche d'un film)
 
-Le doigt est allé au bon contrôle : oui / non / à côté  
-Hésitation : …………  
-Dit à voix haute : …………  
-J'ai aidé : oui / non
+Le doigt est allé au bon contrôle : oui, il cite « Relancer »  
+Hésitation : oui ; pendant la mission, il a cherché ce bouton sur la fiche  
+Dit : « Je cherche où je peux relancer pour avoir un autre film. »  
+J'ai aidé : non
 
 ### Tâche chronométrée
 
 | Mesure | Résultat |
 | --- | --- |
-| Tâche réussie | oui / non |
-| Temps mis | ………… s |
-| Durée du film citée par le testeur | ………… |
+| Film obtenu | Nuit au Chasseron |
+| Temps mis | environ 2 minutes (chronométré par le testeur) |
+| Durée du film citée par le testeur | non relevée |
+| Tâche réussie | en partie : le film a été tiré, mais la durée n'a pas été relevée |
 
-**Hésitations observées :**
-1. …………
-2. …………
+**Hésitations rapportées :**
+1. Sur la fiche du film, pour trouver le bouton qui relance la roue.
+2. Pour valider définitivement le film choisi (réponse écrite : « j'aurais pu hésiter »).
 
-**Remarques dites à voix haute :**
-- « ………… »
-- « ………… »
+**Remarques du testeur :**
+- « Je cherche où je peux relancer pour avoir un autre film. »
+- « Il faudrait que les boutons importants soient bien visibles et que les actions possibles soient faciles à comprendre dès le premier regard. »
+- « J'aime le concept, car il permet de trouver rapidement un film sans devoir parcourir des dizaines de propositions. »
+- « Je rendrais le bouton pour tirer un nouveau film encore plus visible, afin de rendre l'application plus intuitive. »
+
+**Constats du test :**
+- **U1 — « Relancer » pas assez visible.** Le testeur l'a cherché sur la fiche et propose lui-même de le rendre plus visible.
+- **U2 — Durée non relevée.** La mission demandait la durée du film, le testeur ne l'a pas notée. À revérifier lors du test sur l'app en ligne (s16).
 
 ## 4. Audit d'accessibilité (WCAG 2.2 AA)
 
@@ -128,22 +136,21 @@ Méthode : couleurs relevées dans le rendu de la maquette (styles calculés par
 
 ## 5. Correctifs prioritaires
 
-Issus de l'audit ; à confirmer ou remplacer selon les frictions observées pendant le test.
-
-1. **Rendre visibles les champs et les puces (constat A1).** Ajouter une bordure de 1 px `#6b6672` au champ de recherche, aux puces inactives et aux cartes de genre : le contour passe de 1,14:1 à **3,3:1** avec le fond (minimum 3:1).
-2. **Ne plus signaler la puce active par la couleur seule (constat A2).** Ajouter une coche ✓ de 16 px devant le genre actif et garder son texte en gras (700) ; l'état reste aussi annoncé aux lecteurs d'écran avec `aria-pressed`.
+1. **Rendre « Relancer » plus visible (constat U1, test utilisateur).** Remplacer le bouton à simple contour par un bouton « ↻ Tirer un autre film » : fond `#2e2a33`, bordure jaune de 2 px, icône de 20 px, même hauteur (58 px). Texte jaune sur ce fond : 9,2:1. Le libellé dit ce que fait le bouton.
+2. **Rendre visibles les champs et les puces (constat A1, audit).** Ajouter une bordure de 1 px `#6b6672` au champ de recherche, aux puces inactives et aux cartes de genre : le contour passe de 1,14:1 à **3,3:1** avec le fond (minimum 3:1).
 
 ## 6. Plan de remédiation
 
 | Priorité | Constat | Correctif chiffré | Critère |
 | :---: | --- | --- | --- |
-| 1 | A1 — Contour des composants à 1,14:1 | Bordure 1 px `#6b6672` sur le champ, les puces inactives et les cartes → 3,3:1 | 1.4.11 Contraste du contenu non textuel |
-| 2 | A2 — Puce active signalée par la couleur seule | Coche ✓ 16 px + texte en gras 700 sur la puce active | 1.4.1 Utilisation de la couleur |
-| 3 | A3 — Pas d'état de focus dans la maquette C | Reprendre dans le CSS : `outline: 3px solid #ffc94a; outline-offset: 3px` (12,1:1) sur `:focus-visible` | 2.4.7 Visibilité du focus |
-| 4 | A4 — « Retour » atteint seulement avec Shift + Tab | Après un changement d'écran, placer le focus sur le bouton « Retour » (premier élément de l'écran) au lieu du titre | 2.4.3 Parcours du focus |
-| … | Friction observée pendant le test | ………… | ………… |
+| 1 | U1 — « Relancer » cherché sur la fiche | Bouton « ↻ Tirer un autre film » : fond `#2e2a33`, bordure jaune 2 px, icône 20 px, 58 px de haut (texte 9,2:1) | 2.4.6 En-têtes et étiquettes |
+| 2 | A1 — Contour des composants à 1,14:1 | Bordure 1 px `#6b6672` sur le champ, les puces inactives et les cartes → 3,3:1 | 1.4.11 Contraste du contenu non textuel |
+| 3 | A2 — Puce active signalée par la couleur seule | Coche ✓ 16 px + texte en gras 700 sur la puce active | 1.4.1 Utilisation de la couleur |
+| 4 | A3 — Pas d'état de focus dans la maquette C | Reprendre dans le CSS : `outline: 3px solid #ffc94a; outline-offset: 3px` (12,1:1) sur `:focus-visible` | 2.4.7 Visibilité du focus |
+| 5 | A4 — « Retour » atteint seulement avec Shift + Tab | Après un changement d'écran, placer le focus sur le bouton « Retour » (premier élément de l'écran) au lieu du titre | 2.4.3 Parcours du focus |
+| 6 | U2 — Durée non relevée par le testeur | Revérifier au test en ligne (s16) ; si elle est encore manquée, l'afficher sous le titre en 18 px gras | Ergonomie |
 
 ## 7. 1 changement que je ferai
 
-Avant : …………  
-Après (prévu) : …………
+Avant : « Relancer » est un bouton à simple contour jaune sous « Je regarde ça » ; le testeur l'a cherché.  
+Après (prévu) : bouton « ↻ Tirer un autre film » avec fond, bordure jaune de 2 px et icône, toujours à 58 px de haut dans la zone du pouce.
