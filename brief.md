@@ -82,8 +82,9 @@ Persona complet : [mon_app/design/persona.md](mon_app/design/persona.md) · User
 
 ## Revue croisée (binôme)
 
-- Relu par : …………………… le ……………
-- [ ] Le pitch se comprend sans explication orale
-- [ ] Les 3 écrans et leur bouton principal sont clairs
-- [ ] La palette et les interdits sont assez précis pour une IA
-- Remarques du binôme : ……………………
+- Relu par : Zinedine le 15.10.26
+- [x] Le pitch se comprend sans explication orale
+- [x] Les 3 écrans et leur bouton principal sont clairs
+- [x] La palette et les interdits sont assez précis pour une IA
+- Remarques du binôme : « Le brief est clair et bien structuré. Je préciserais davantage les couleurs exactes et l'apparence des boutons principaux pour garantir une interface cohérente. » Il propose aussi d'ajouter les codes hexadécimaux des couleurs.
+- Suite donnée : les codes hexadécimaux provisoires sont dans [critique.md](mon_app/design/critique.md) ; ils seront reportés dans la palette du brief en s7-s9.
